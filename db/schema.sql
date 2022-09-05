@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS unhack_db;
+CREATE DATABASE unhack_db;
