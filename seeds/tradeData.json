@@ -1,0 +1,19 @@
+[
+    {
+        "user_id": 1,
+        "trade_name": "XYZ Corp",
+        "amount": 100000
+    }, {
+        "user_id": 1,
+        "trade_name": "ABC CORP",
+        "amount": 500000
+    }, {
+        "user_id": 2,
+        "trade_name": "XYZ Corp",
+        "amount": 900000
+    }, {
+        "user_id": 2,
+        "trade_name": "ABC CORP",
+        "amount": 2000
+    }
+]

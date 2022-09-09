@@ -36,6 +36,7 @@ User.init(
         len: [5], // No one could guess 5 chars 
       },
     },
+    
   },
   {
     hooks: {
