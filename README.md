@@ -66,8 +66,36 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Clone this repo 
- TO DO
+1. Clone this repo: 
+```sh 
+git clone https://github.com/malaphar/unhackable-bd.git && cd unhackable-bd
+```
+2. Setup MySQL database: 
+```sh
+mysql.server start # If mysql isn't running. Note instructions done on MacOS
+mysql -u {Your Username} -p
+CREATE DATABASE unhack_db;
+```
+Alternatively SOURCE the ./db/schema.sql
+
+3. Install Node packages *Ensure you're in the project folder ``unhackable-bd/``*:
+```sh
+npm install
+```
+4. Setup a ```.env``` file. See the ```.env.EXAMPLE``` copy this and remove .EXAMPLE add your mysql credentials
+5. Seed the database:
+```sh
+npm run seed
+```  
+6. Start the server:
+```sh
+npm run start
+```
+If developing to use nodemon run:
+```sh
+npm run dev
+```
+The server should be running at [localhost:3000](http://localhost:3000)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -77,7 +105,8 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Once installed run `npm start` and TO DO
+For "Employee" login ```http://localhost:3000/user/login``` or for the mock general unauthenticated user ```http://localhost:3000/```
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
