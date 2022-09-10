@@ -1,7 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Trades, Settings } = require('../models');
+const { User, Trades, Settings, Messages } = require('../models');
 
 const userData = require('./userData.json');
+const msgData = require('./msgData.json');
 const tradeData = require('./tradeData.json');
 const settingsData = require('./settingsData.json');
 
@@ -23,6 +24,11 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  await Messages.bulkCreate(msgData, {
+    individualHooks: true,
+    returning: true,
+  });
+  
   process.exit(0);
 };
 
