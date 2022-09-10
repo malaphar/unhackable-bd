@@ -16,6 +16,6 @@ router.get('/', async (req, res) => {
       } else {
         res.sendFile(path.join(__dirname, '../views/index.html'));
       }
-  });
+});
 
 module.exports = router;
