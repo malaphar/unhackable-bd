@@ -11,7 +11,7 @@ router.use('/user', userRoutes);
 
 // Home page
 router.get('/', async (req, res) => {
-    if (!req.session.logged_in) {
+    if (req.session.logged_in) {
         res.redirect('/user/login');
       } else {
         res.sendFile(path.join(__dirname, '../views/index.html'));

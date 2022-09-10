@@ -41,6 +41,9 @@ This is a intentionally vulnerable web application to demonstrate security issue
 * [Express](https://expressjs.com/)
 * [Mysql](https://www.mysql.com/)
 * [Sequelize ORM](https://sequelize.org/)
+* [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+
+Royalty free stock images from [Pixabay](https://pixabay.com/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

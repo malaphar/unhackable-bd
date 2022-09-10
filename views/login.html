@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <title>Login</title>
 </head>
 <body>
-    <main>
-        <section>
+    <main class="limiter">
+        <section id="login-main" class="container-sm">
+            <h1 class="display-5 text-center">Trader Login Portal</h1>
+            <form id="login-form" class="login100-form">
+                <div class="mb-3">
+                  <label for="email-login" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="password-login" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password-login">
+                </div>
+                <div class="mb-3">
+                  <button type="button" id="login-btn-trouble" class="btn btn-info">Trouble Logging In</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
 
         </section>
     </main>
-    <script src="./js/login.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

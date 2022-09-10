@@ -12,6 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      // Redirect on login success
       document.location.replace('/');
     } else {
       alert('Failed to log in');
@@ -20,5 +21,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
