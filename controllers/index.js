@@ -18,4 +18,11 @@ router.get('/', async (req, res) => {
       }
 });
 
+
+// Redirect Handlers
+router.get('/login', async (req, res) => {
+  res.redirect('/user/login');
+})
+
+
 module.exports = router;

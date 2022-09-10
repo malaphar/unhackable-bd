@@ -12,6 +12,7 @@
 <body>
     <header>
         <h1 class="display-3 text-center">Trader Advantage Pro Max</h1>
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,7 +21,8 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <button class="btn" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact an Investment Professional</button>
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact an
+                                Investment Professional</button>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -34,26 +36,30 @@
     <main class="limiter">
         <section>
             <!-- Modal -->
-<div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contant-modal-label" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contant-modal-label">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+            <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contant-modal-label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contant-modal-label">Ask a professional</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Content Cards -->
-        <section class="container">
+        <section class="container mt-4">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                     <div class="card h-100">
