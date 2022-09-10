@@ -7,7 +7,12 @@ router.get('/login', async (req, res) => {
 })
 
 router.get('/trades', async (req, res) => {
-  res.sendFile(path.join(__dirname, '../../views/trades.html'));
+  if (req.session.logged_in) {
+    res.sendFile(path.join(__dirname, '../../views/trades.html'));
+  } else {
+    res.redirect('/user/login')
+  }
 })
+
 
 module.exports = router;

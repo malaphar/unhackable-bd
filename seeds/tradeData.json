@@ -15,5 +15,17 @@
         "user_id": 2,
         "trade_name": "ABC CORP",
         "amount": 2000
+    }, {
+        "user_id": 2,
+        "trade_name": "ABC CORP",
+        "amount": 29000
+    }, {
+        "user_id": 3,
+        "trade_name": "ABC",
+        "amount": 2000
+    }, {
+        "user_id": 3,
+        "trade_name": "ABC CORP",
+        "amount": 2000
     }
 ]

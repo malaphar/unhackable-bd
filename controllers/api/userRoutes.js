@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // /api/users/ -- base route 
+
+// AUTHN 
 router.post('/login', async (req, res) => {
   try {
     // find user by email 
@@ -45,5 +47,15 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+// User Info
+
+router.get('/userId', (req, res) => {
+  if (req.session.logged_in) {
+    res.json({user_id: req.session.user_id})
+  } else {
+    res.status(404).end();
+  }
+})
 
 module.exports = router;

@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">My Trade Planner</a>
@@ -38,33 +38,38 @@
             </div>
         </nav>
     </header>
-    <main class="limiter">
+    <main class="h-100">
         <section>
-            <!-- Modal -->
-            <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contant-modal-label"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contant-modal-label">Ask a professional</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Send message</button>
-                        </div>
+            <div class="container px-4 text-center h-100">
+                <div class="row gx-5 mt-5 mb-5">
+                  <div class="col">
+                    <p class="fs-3">Trades to be executed</p>
+                   <div class="p-3 border bg-light">
+                    <table class="table mt-2">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Ticker</th>
+                            <th scope="col">Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody id="trades-table">
+                        </tbody>
+                      </table>
+                   </div>
+                  </div>
+                  <div class="col">
+                    <p class="fs-3">Client Messages</p>
+                    <div id="messages-container" class="p-3 border bg-light">
+
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
         </section>
     </main>
     <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

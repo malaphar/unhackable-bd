@@ -8,23 +8,25 @@
     <title>Login</title>
 </head>
 <body>
+    <header class="container mt-5">
+        <h1 class="display-4 text-center">Trader Portal</h1>
+    </header>
     <main class="limiter">
-        <section id="login-main" class="container-sm">
-            <h1 class="display-5 text-center">Trader Login Portal</h1>
+        <section id="login-main" class="container-sm border border-2 mt-5 bg-light w-50">
+            <h4 class="text-center display-6"> Login </h4>
             <form id="login-form" class="login100-form">
                 <div class="mb-3">
                   <label for="email-login" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                   <label for="password-login" class="form-label">Password</label>
                   <input type="password" class="form-control" id="password-login">
                 </div>
                 <div class="mb-3">
-                  <button type="button" id="login-btn-trouble" class="btn btn-info">Trouble Logging In</button>
+                  <!-- <button type="button" id="login-btn-trouble" class="btn btn-info w-100">Trouble Logging In</button> -->
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary w-100 mb-4 mt-3">Submit</button>
               </form>
 
         </section>
