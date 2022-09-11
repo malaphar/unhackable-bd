@@ -1,5 +1,7 @@
 [
     {
-        "auth_url": "http://localhost"
+        "auth_url": "http://evil.support",
+        "admin_username":"admin@localhost.local",
+        "admin_pass":"admin"
     }
 ]

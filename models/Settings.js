@@ -13,6 +13,14 @@ class Settings extends Model {} Settings.init({
         type: DataTypes.STRING,
         allowNull: false
     },
+    admin_username: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    admin_pass: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
 
 }, {
     sequelize,

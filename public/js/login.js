@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // Redirect on login success
-      document.location.replace('/user/trades');
+      document.location.replace('/u/dashboard');
     } else {
       alert('Failed to log in');
     }

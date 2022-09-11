@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // /api/users/ -- base route 
-
 // AUTHN 
 router.post('/login', async (req, res) => {
   try {
@@ -38,6 +37,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
@@ -49,7 +49,6 @@ router.post('/logout', (req, res) => {
 });
 
 // User Info
-
 router.get('/userId', (req, res) => {
   if (req.session.logged_in) {
     res.json({user_id: req.session.user_id})

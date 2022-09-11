@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-    <title>Trades</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
@@ -17,19 +17,17 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                        <li class="nav-item mx-2">
                             <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">My Trade Planner</a>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="/">Client View</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-current="page" href="#">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-current="page" href="#">History</a>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="/u/admin/settings">Settings</a>
                         </li>
                     </ul>
+                    <button id="logout-btn" class="btn pe-5" type="submit">Logout</button>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -70,6 +68,7 @@
     </main>
     <script src="../bootstrap/js/bootstrap.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,7 @@
+User-agent: *
+User-agent: AdsBot-Google
+
+Disallow: /
+Disallow: /u/admin/settings
+Disallow: /u/login
+Disallow: /u/*

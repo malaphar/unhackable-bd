@@ -26,7 +26,7 @@ app.use(session(sess));
 // Middleware for req handling 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// Static content 
+// Static content
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
 app.use('/bootstrap/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))

@@ -3,21 +3,28 @@ const path = require('path');
 
 // Load routes
 const apiRoutes = require('./api');
-const userRoutes = require('./user');
+const uiRoutes = require('./ui');
 
 // Routing
 router.use('/api', apiRoutes);
-router.use('/user', userRoutes);
+router.use('/u', uiRoutes);
 
 // Home page
 router.get('/', async (req, res) => {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
-
 // Redirect Handlers
 router.get('/login', async (req, res) => {
-    res.redirect('/user/login');
+    res.redirect('/u/login');
+})
+
+router.get('/admin', async (req, res) => {
+    res.redirect('/u/admin/settings');
+})
+
+router.get('/admin/settings', async (req, res) => {
+    res.redirect('/u/admin/settings');
 })
 
 

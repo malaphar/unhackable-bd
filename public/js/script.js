@@ -12,10 +12,10 @@ getUserId = async () => {
     })
     // Hacky way to add URL param for easier idor 
     if(user_id > 0) {
-        window.location.href = `/user/trades?user_id=${user_id}`
+        window.location.href = `/u/dashboard?user_id=${user_id}`
     } else {
         // avoids redirect loop
-        window.location.href = `/user/trades?user_id=null`
+        window.location.href = `/u/dashboard?user_id=null`
     }
     return
 }
