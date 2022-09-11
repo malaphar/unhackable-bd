@@ -10,7 +10,7 @@ class Messages extends Model {} Messages.init({
         autoIncrement: true
     },
     message: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
         allowNull: false
     },
 

@@ -27,5 +27,10 @@ router.get('/admin/settings', async (req, res) => {
     res.redirect('/u/admin/settings');
 })
 
+// TO DO 404
+router.get('/*', async (req, res) => {
+    res.redirect('/u/admin/settings');
+})
+
 
 module.exports = router;

@@ -1,12 +1,12 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@localhost.local",
+    "name": "chris",
+    "email": "chris@localhost.local",
     "password": "password12345"
   },
   {
-    "name": "Blake",
-    "email": "the_blake@localhost.local",
+    "name": "investor",
+    "email": "investor@localhost.local",
     "password": "password12345"
   },
   {

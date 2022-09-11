@@ -4,7 +4,6 @@ const adminUserNameElem = document.querySelector('#admin-username')
 // Gets current configured Hook URL and Admin username
 getCurrent = async () => {
     const resp = await fetch('/api/settings').then(response => {return response.json()})
-    console.log(resp[0].auth_url)
     if(resp[0].auth_url) {
         hookUrlElem.value = resp[0].auth_url
     }
@@ -28,11 +27,23 @@ testConn = async(e) => {
             return response.text()
         }
     })
-    console.log(testResp)
+}
+
+// Saves settings and runs test
+saveSettings = async(e) => {
+    e.preventDefault()
+    testConn(e)
+    const saveR = await fetch('/api/settings', {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({auth_url:hookUrlElem.value, admin_username: adminUserNameElem.value})
+    })
+
 }
 
 // Event Listeners
 document.querySelector('#test-con-btn').addEventListener('click', testConn)
+document.querySelector('#settings-form').addEventListener('submit', saveSettings)
 
 // Func to run on load
 getCurrent()

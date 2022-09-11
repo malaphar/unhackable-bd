@@ -56,6 +56,22 @@ writeTradesData = async() => {
     }
 }
 
+// Deletes message by Id pulled from data-id on btn
+deleteMsg = async (e) => {
+    const delRes = await fetch(`/api/messages/${e.target.id}`, {
+        method:'DELETE'
+    }).then(response => { 
+        if(response.ok) {
+            return 
+        }
+        throw new Error('Error: Unable to delete message');
+    }).catch((error) => {
+        console.log(error)
+    })
+    getMessage()
+
+}
+
 
 // Gets Messages from API and writes to DOM
 getMessage = async () => {
@@ -63,15 +79,26 @@ getMessage = async () => {
     const msgs = await fetch('/api/messages', {credentials:'include'}).then(response => response.json()).then(data => {
         return data
     })
-    // Reset for polling
+    // Reset for polling - TO DO only write if deltas 
     msgContElem.innerHTML = ""
     if(msgs.length > 0){
         msgs.forEach(m => {
+            const div = document.createElement('div')
             const p = document.createElement('p')
+            const btn = document.createElement('button')
+            div.classList.add('row', 'mt-3', 'mb-3')
+            btn.classList.add('btn','btn-dark','col', 'h-25')
+            btn.textContent = 'Delete'
+            btn.setAttribute('id', m.id)
+            btn.addEventListener('click', deleteMsg)
             // XSS here due to HTML node instead of txt textContent is correct way
             p.innerHTML = m.message
-            p.classList.add('fs-6')
-            msgContElem.appendChild(p)
+            p.classList.add('d-inline','fs-6', 'col')
+            div.appendChild(p)
+            div.appendChild(btn)
+
+            msgContElem.appendChild(div)
+
         });
     }else {
         console.warn('No messages found')
@@ -89,7 +116,7 @@ if(userId) {
 
 
 // Calls write func once on load then pulls for new messages
-setInterval(getMessage, 8000);
+setInterval(getMessage, 9000);
 (async()=> {
     writeTradesData()
     getMessage()
