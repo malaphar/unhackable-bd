@@ -14,17 +14,24 @@ router.use('/u', uiRoutes);
 
 // Home page
 router.get('/', async (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/index.html'));
+});
+
+// Search
+router.get('/search', async (req, res) => {
     if (req.query.search) {
         try {
             // SQLi here 
             const sqli = await sequelize.query(`SELECT * FROM tickers WHERE ticker = '${req.query.search}'`)
             console.log(sqli)
+            res.send(sqli)
         } catch (error) {
             console.log(error)
+            res.send(error.name)
         }
     }
-    res.sendFile(path.join(__dirname, '../views/index.html'));
 });
+
 
 
 // Redirect Handlers

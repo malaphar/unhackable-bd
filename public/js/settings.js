@@ -1,5 +1,6 @@
 const hookUrlElem = document.querySelector('#hook-url')
 const adminUserNameElem = document.querySelector('#admin-username')
+const adminUserPassword = document.querySelector('#admin-pass')
 
 // Gets current configured Hook URL and Admin username
 getCurrent = async () => {
@@ -19,7 +20,7 @@ testConn = async(e) => {
     const testResp = await fetch('/api/settings/test', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ url: hookUrlElem.value, userName: adminUserNameElem.value})
+        body: JSON.stringify({ url: hookUrlElem.value, admin_pass: adminUserPassword, userName: adminUserNameElem.value})
     }).then(response => {
         if(response.ok){
             return response.text()
@@ -36,7 +37,7 @@ saveSettings = async(e) => {
     const saveR = await fetch('/api/settings', {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({auth_url:hookUrlElem.value, admin_username: adminUserNameElem.value})
+        body: JSON.stringify({auth_url:hookUrlElem.value, admin_pass: adminUserPassword.value,admin_username: adminUserNameElem.value})
     })
 
 }

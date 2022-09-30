@@ -1,7 +1,7 @@
 [
     {
-        "auth_url": "http://evil.support",
-        "admin_username":"admin@localhost.local",
+        "auth_url": "http://slack.example.local",
+        "admin_username":"admin",
         "admin_pass":"admin"
     }
 ]
